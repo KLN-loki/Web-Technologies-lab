@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Class.xsl"?>
+<Class>
+	<student>
+		<name category="Student">
+			Mohit
+		</name>
+		<rono category="RollNumber">
+			21131A05A4
+		</rono>
+		<branch category="Branch">
+			CSE
+		</branch>
+	</student>
+	<student>
+		<name category="Student">
+			Guna Sekhar
+		</name>
+		<rono category="RollNumber">
+			21131A0579
+		</rono>
+		<branch category="Branch">
+			CSE
+		</branch>
+	</student>
+	<student>
+		<name category="Student">
+			Lokesh
+		</name>
+		<rono category="RollNumber">
+			21131A0587
+		</rono>
+		<branch category="Branch">
+			CSE
+		</branch>
+	</student>
+	<student>
+		<name category="Student">
+			Gowtham
+		</name>
+		<rono category="RollNumber">
+			21131A05D2
+		</rono>
+		<branch category="Branch">
+			CSE
+		</branch>
+	</student>
+</Class>

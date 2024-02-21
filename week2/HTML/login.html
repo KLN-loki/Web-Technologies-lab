@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/week2/CSS/login_registration_styles.css" />
+  </head>
+  <body>
+    <h2>Login</h2>
+    <form name="login_form">
+      <div class="grid-container">
+        <label class="label" for="username">Username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div class="grid-container">
+        <label class="label" for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="buttons">
+        <input class="button" onclick="check_login()" type="submit" value="Login" /> <br />
+        <a class="button1" href="forgot_password.html" target="rightFrame">forgot password</a> <br />
+        <a class="button1" href="registration.html" target="rightFrame">sign up</a>
+      </div>
+    </form>
+    <script>
+      function check_login() {
+        let username = document.forms['login_form']['username'].value;
+        let password = document.forms['login_form']['password'].value;
+        if (username.length < 6) {
+          alert('Username must be of atleast 6 characters.');
+          console.log('Username must be of atleast 6 characters.');
+          return false;
+        } else if (password.length < 8) {
+          alert('Password must be of atleast 8 characters');
+
+          console.log('Password must be of atleast 8 characters');
+        } else if (!password.match('(?=.*[A-Z])')) {
+          alert('Password should conatin atleast one uppercase letter');
+          console.log('Password should conatin atleast one uppercase letter');
+        } else if (!password.match('(?=.*[a-z])')) {
+          alert('Password should conatin atleast one lowercase letter');
+          console.log('Password should conatin atleast one lowercase letter');
+        } else if (!password.match('(?=.*[0-9])')) {
+          alert('Password should conatin atleast one numeric');
+          console.log('Password should conatin atleast one numeric');
+        } else if (!password.match('(?=.*[!@#$%^&*])')) {
+          alert('Password should conatin atleast one special symbol');
+          console.log('Password should conatin atleast one special symbol');
+        } else {
+          alert('login successful');
+          console.log('success');
+        }
+      }
+    </script>
+  </body>
+</html>

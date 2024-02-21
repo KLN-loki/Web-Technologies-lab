@@ -1,0 +1,41 @@
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<element name="Class">
+		<complexType>
+			<sequence>
+				<element name="student" maxOccurs="unbounded" minOccurs="0">
+					<complexType>
+						<sequence>
+							<element name="name">
+								<complexType>
+									<simpleContent>
+										<extension base="xs:string">
+											<attribute type="xs:string" name="category" use="optional" />
+										</extension>
+									</simpleContent>
+								</complexType>
+							</element>
+							<element name="rono">
+								<complexType>
+									<simpleContent>
+										<extension base="xs:string">
+											<attribute type="xs:string" name="category" use="optional" />
+										</extension>
+									</simpleContent>
+								</complexType>
+							</element>
+							<element name="branch">
+								<complexType>
+									<simpleContent>
+										<extension base="xs:string">
+											<attribute type="xs:string" name="category" use="optional" />
+										</extension>
+									</simpleContent>
+								</complexType>
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

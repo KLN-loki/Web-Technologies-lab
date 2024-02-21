@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="/week2/CSS/login_registration_styles.css" />
+  </head>
+  <body>
+    <h2>Registration</h2>
+    <form name="register_form">
+      <div class="grid-container">
+        <label class="label" for="username">Username</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div class="grid-container">
+        <label class="label" for="password">Password</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div class="grid-container">
+        <label class="label" for="confirm_password">Confirm Password</label>
+        <input type="password" name="confirm_password" id="confirm_password" />
+      </div>
+      <div class="grid-container">
+        <label class="label" for="email">Email</label>
+        <input type="email" name="email_id" id="email" />
+      </div>
+      <div class="grid-container">
+        <label class="label" for="mobile">Mobile Number</label>
+        <input type="tel" name="mobile_no" id="mobile" />
+      </div>
+      <div class="grid-container">
+        <label class="label" for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob" />
+      </div>
+      <div class="grid-container">
+        <label class="label" for="address">Address</label>
+        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+      </div>
+      <div class="grid-container">
+        <label class="label" for="gender">Gender</label>
+        <select>
+          <optgroup>
+            <option value="">Male</option>
+            <option value="">Female</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="buttons">
+        <input onclick="check_register()" class="button" type="submit" value="Register" />
+      </div>
+    </form>
+    <script>
+      function check_register() {
+        let username = document.forms['register_form']['username'].value;
+        let password = document.forms['register_form']['password'].value;
+        let confirm_password = document.forms['register_form']['confirm_password'].value;
+        let email_id = document.forms['register_form']['email_id'].value;
+        let mobile_no = document.forms['register_form']['mobile_no'].value;
+        var email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        var numbers = /^[0-9]+$/;
+
+        if (username.length < 6) {
+          alert('Username must be of atleast 6 characters.');
+          console.log('Username must be of atleast 6 characters.');
+          return false;
+        } else if (password.length < 8) {
+          alert('Password must be of atleast 8 characters');
+          console.log('Password must be of atleast 8 characters');
+        } else if (password != confirm_password) {
+          alert('Confirm password must be the same of passsword');
+          console.log('Confirm password must be the same of passsword');
+        } else if (!password.match('(?=.*[A-Z])')) {
+          alert('Password should conatin atleast one uppercase letter');
+          console.log('Password should conatin atleast one uppercase letter');
+        } else if (!password.match('(?=.*[a-z])')) {
+          alert('Password should conatin atleast one lowercase letter');
+          console.log('Password should conatin atleast one lowercase letter');
+        } else if (!password.match('(?=.*[0-9])')) {
+          alert('Password should conatin atleast one numeric');
+          console.log('Password should conatin atleast one numeric');
+        } else if (!password.match('(?=.*[!@#$%^&*])')) {
+          alert('Password should conatin atleast one special symbol');
+          console.log('Password should conatin atleast one special symbol');
+        } else if (!email_id.match(email)) {
+          alert('Enter valid Email id');
+          console.log('Enter valid Email id');
+        } else if (mobile_no.length != 10) {
+          alert('Mobile number must contain 10 digits');
+          console.log('Mobile number must contain 10 digits');
+        } else if (!mobile_no.match(numbers)) {
+          alert('Mobile number must contain only digits');
+          console.log('Mobile number must contain only digits');
+        } else if (!mobile_no.charAt(0).match('(?=.*[6-9])')) {
+          alert('Mobile number must start with any number from 6-9');
+          console.log('Mobile number must start with any number from 6-9');
+        } else {
+          alert('Registration successful');
+          console.log('success');
+        }
+      }
+    </script>
+  </body>
+</html>

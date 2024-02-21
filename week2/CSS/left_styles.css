@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+td {
+  background-color: rgb(6, 53, 120);
+  padding: 2%;
+  border-bottom: 0.1rem solid white;
+
+  font-size: 18px;
+}
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none !important;
+}

@@ -1,0 +1,12 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 5%;
+}
+.about {
+  padding: 2%;
+}
+.about h2 {
+  text-decoration: underline;
+  text-align: center;
+}
