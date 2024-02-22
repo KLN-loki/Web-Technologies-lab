@@ -1,0 +1,7 @@
+<!DOCTYPE Class [
+<!ELEMENT Class (student*) >
+<!ELEMENT student (name, rono, branch)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT rono (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+]>
